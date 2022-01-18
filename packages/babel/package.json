@@ -3,7 +3,7 @@
   "name": "@acme/babel-preset-expo",
   "version": "1.0.0",
   "description": "Acme Babel configuration for React Native",
-  "author": "Cedric van Putten <me@bycedric.com>",
+  "author": "Mike Connor <mike@mikeconnor.tech>",
   "license": "MIT",
   "main": "index.js",
   "files": [
