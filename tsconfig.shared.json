@@ -1,3 +1,9 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json"
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "importHelpers": true,
+  }
 }

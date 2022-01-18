@@ -12,12 +12,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "eas-build-post-install": "yarn workspaces run build"
+    "eject": "expo eject"
   },
   "dependencies": {
     "@acme/ui": "*",
-    "expo": "^43.0.0",
+    "expo": "^43.0.5",
     "expo-status-bar": "~1.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -25,9 +24,11 @@
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
-    "@acme/babel-preset-expo": "*",
     "@acme/eslint-config": "*",
     "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.16.8",
+    "@types/babel__core": "^7.1.18",
+    "@types/babel__preset-env": "^7",
     "@types/react": "~17.0.21",
     "@types/react-dom": "~17.0.9",
     "@types/react-native": "~0.64.12",

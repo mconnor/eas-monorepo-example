@@ -3,7 +3,7 @@
   "name": "@acme/eslint-config",
   "version": "1.0.0",
   "description": "Acme eslint configuration for React Native",
-  "author": "Cedric van Putten <me@bycedric.com>",
+  "author": "Mike Connor <mike@mikeconnor.tech>",
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -14,15 +14,29 @@
     "test": "echo 'Nothing to test'",
     "es:lint": "cd $INIT_CWD && eslint --ext js,ts,tsx .",
     "es:fix": "cd $INIT_CWD && eslint --ext js,ts,tsx . --fix",
+    "format": "prettier --write --ext js,ts,tsx",
     "fix": "echo 'Nothing to fix'",
     "doctor": "echo 'Nothing to doctor'"
   },
   "dependencies": {
+    "@react-native-community/eslint-config": "^3.0.1",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "eslint": "^8.7.0",
+    "eslint": "^7.32.0",
     "eslint-config-universe": "^10.0.0",
     "prettier": "^2.5.1",
     "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 4
+  },
+  "engines": {
+    "node": ">16.13.0"
   }
 }

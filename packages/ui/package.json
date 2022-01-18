@@ -3,35 +3,24 @@
   "name": "@acme/ui",
   "version": "1.0.0",
   "description": "Acme UI components for React Native",
-  "author": "Cedric van Putten <me@bycedric.com>",
+  "author": "Mike Connor <mike@mikeconnor.tech>",
   "license": "MIT",
-  "main": "build/commonjs/index.js",
-  "module": "build/module/index.js",
-  "types": "build/typescript/index.d.ts",
   "react-native": "src/index.tsx",
   "files": [
     "build",
     "src"
   ],
   "scripts": {
+    "lint": "yarn es:lint",
+    "fix": "yarn es:fix",
     "build": "bob build",
     "test": "eslint --ext ts,tsx ./src"
   },
   "devDependencies": {
     "@acme/eslint-config": "*",
-    "react-native-builder-bob": "^0.18.1",
     "typescript": "^4.3.5"
   },
   "eslintConfig": {
     "extends": "@acme/eslint-config"
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "build",
-    "targets": [
-      "commonjs",
-      "module",
-      "typescript"
-    ]
   }
 }

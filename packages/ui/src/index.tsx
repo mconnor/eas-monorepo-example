@@ -1,18 +1,20 @@
-import React from "react";
+import { ReactNode } from "react";
 import { StyleSheet, Text, TextProps } from "react-native";
 
 export interface ParagraphProps extends TextProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
-export const Paragraph = ({ children, style, ...props }: ParagraphProps) => (
-  <Text {...props} style={[styles.paragraph, style]}>
-    {children}
-  </Text>
-);
+export function Paragraph({ children, style, ...props }: ParagraphProps) {
+  return (
+    <Text {...props} style={[styles.paragraph, style]}>
+      {children}
+    </Text>
+  );
+}
 
 export interface StrongProps extends TextProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export const Strong = ({ children, style, ...props }: StrongProps) => (

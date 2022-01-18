@@ -2,6 +2,10 @@
   "private": true,
   "name": "@acme/monorepo",
   "scripts": {
+    "lint-ui": "yarn workspace @acme/ui lint",
+    "fix-ui": "yarn workspace @acme/ui fix",
+    "lint-app": "yarn workspace @acme/app-managed lint",
+    "clear": "./scripts/clear.sh",
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test",
     "managed": "yarn workspace @acme/app-managed",
@@ -15,5 +19,6 @@
   ],
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1"
-  }
+  },
+  "packageManager": "yarn@3.1.1"
 }
