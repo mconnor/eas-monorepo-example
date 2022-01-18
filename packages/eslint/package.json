@@ -11,13 +11,17 @@
   ],
   "scripts": {
     "build": "echo 'Nothing to build'",
-    "test": "echo 'Nothing to test'"
+    "test": "echo 'Nothing to test'",
+    "es:lint": "cd $INIT_CWD && eslint --ext js,ts,tsx .",
+    "es:fix": "cd $INIT_CWD && eslint --ext js,ts,tsx . --fix",
+    "fix": "echo 'Nothing to fix'",
+    "doctor": "echo 'Nothing to doctor'"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@typescript-eslint/parser": "^4.28.1",
-    "eslint": "^7.32.0",
-    "eslint-config-universe": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-config-universe": "^10.0.0",
     "prettier": "^2.5.1",
     "typescript": "^4.3.5"
   }
