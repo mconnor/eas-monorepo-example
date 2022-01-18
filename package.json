@@ -2,6 +2,7 @@
   "private": true,
   "name": "@acme/monorepo",
   "scripts": {
+    "doctor": "yarn workspace @acme/app-managed expo doctor",
     "lint-ui": "yarn workspace @acme/ui lint",
     "fix-ui": "yarn workspace @acme/ui fix",
     "lint-app": "yarn workspace @acme/app-managed lint",

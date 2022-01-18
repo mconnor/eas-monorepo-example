@@ -1,7 +1,6 @@
 module.exports = {
     extends: [
-        'universe/native',
-    '@react-native-community',
+    'universe/native',
     'plugin:prettier/recommended',
     ],
     plugins: ['react'],
