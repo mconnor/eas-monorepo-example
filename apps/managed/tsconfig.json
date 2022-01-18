@@ -1,6 +1,11 @@
 {
   "extends": "../../tsconfig.shared.json",
+  
   "compilerOptions": {
-    "baseUrl": "."
-  }
+    "composite": true,
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": true,
+  },
+  "files": ["App.tsx"],
 }

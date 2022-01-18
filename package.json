@@ -2,10 +2,13 @@
   "private": true,
   "name": "@acme/monorepo",
   "scripts": {
+    "expo-ios": "yarn workspace @acme/app-managed ios",
     "doctor": "yarn workspace @acme/app-managed expo doctor",
     "lint-ui": "yarn workspace @acme/ui lint",
     "fix-ui": "yarn workspace @acme/ui fix",
+    
     "lint-app": "yarn workspace @acme/app-managed lint",
+    "fix-app": "yarn workspace @acme/app-managed fix",
     "clear": "./scripts/clear.sh",
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test",
