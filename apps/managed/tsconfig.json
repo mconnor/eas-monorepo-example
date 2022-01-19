@@ -1,11 +1,7 @@
 {
   "extends": "../../tsconfig.shared.json",
-  
   "compilerOptions": {
-    "composite": true,
     "baseUrl": ".",
-    "sourceMap": true,
-    "declaration": true,
-  },
-  "files": ["App.tsx"],
+    "jsx": "react-native",
+  }
 }

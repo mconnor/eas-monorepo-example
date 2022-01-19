@@ -1,7 +1,11 @@
 {
-  "extends": "../../tsconfig.shared.json",
-  "include": ["src"],
-  "compilerOptions": {
-    "baseUrl": "./src"
-  }
+    "extends": "../../tsconfig.shared.json",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "skipLibCheck": true,
+        "composite": true,
+
+      
+    }
 }

@@ -9,8 +9,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@acme/app-managed@workspace:apps/managed"
   dependencies:
-    "@acme/eslint-config": "*"
-    "@acme/ui": "*"
+    "@acme/eslint-config": "workspace:*"
+    "@acme/ui": "workspace:*"
     "@babel/core": ^7.12.9
     "@babel/preset-env": ^7.16.8
     "@types/babel__core": ^7.1.18
@@ -18,17 +18,20 @@ __metadata:
     "@types/react": ~17.0.21
     "@types/react-dom": ~17.0.9
     "@types/react-native": ~0.64.12
+    babel-preset-expo: ^9.0.2
     expo: ^43.0.5
     expo-status-bar: ~1.1.0
     react: 17.0.1
     react-dom: 17.0.1
     react-native: 0.64.3
+    react-native-dotenv: ^3.3.1
+    react-native-reanimated: ~2.2.0
     react-native-web: 0.17.1
     typescript: ~4.3.5
   languageName: unknown
   linkType: soft
 
-"@acme/eslint-config@*, @acme/eslint-config@workspace:packages/eslint":
+"@acme/eslint-config@workspace:*, @acme/eslint-config@workspace:packages/eslint":
   version: 0.0.0-use.local
   resolution: "@acme/eslint-config@workspace:packages/eslint"
   dependencies:
@@ -48,14 +51,15 @@ __metadata:
   resolution: "@acme/monorepo@workspace:."
   dependencies:
     "@tsconfig/recommended": ^1.0.1
+    workspace: ^0.0.1-preview.1
   languageName: unknown
   linkType: soft
 
-"@acme/ui@*, @acme/ui@workspace:packages/ui":
+"@acme/ui@workspace:*, @acme/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@acme/ui@workspace:packages/ui"
   dependencies:
-    "@acme/eslint-config": "*"
+    "@acme/eslint-config": "workspace:*"
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
@@ -2612,6 +2616,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-object-assign@npm:^7.10.4":
+  version: 7.16.7
+  resolution: "@babel/plugin-transform-object-assign@npm:7.16.7"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.16.7
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 4d8e7f4c08e0695e78d4c3ff9bdc0ca8243a3ce8fa9dc75940d9caabb766567ec550b2055723599e70132dab173f70e8e9f18cb120adc7badb0153527c4111be
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-object-super@npm:^7.0.0":
   version: 7.12.1
   resolution: "@babel/plugin-transform-object-super@npm:7.12.1"
@@ -4967,6 +4982,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-preset-expo@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "babel-preset-expo@npm:9.0.2"
+  dependencies:
+    "@babel/plugin-proposal-decorators": ^7.12.9
+    "@babel/plugin-transform-react-jsx": ^7.12.17
+    "@babel/preset-env": ^7.12.9
+    babel-plugin-module-resolver: ^4.1.0
+    babel-plugin-react-native-web: ~0.17.1
+    metro-react-native-babel-preset: ~0.64.0
+  checksum: 79c3cc58ced57949b7ffdaafd9663bdad194bee22ecb9ddd34b4d5ca5c56b8f7b4607441f924e3d491fba0fa6943b31a32becd35deef30147723e243427d1bdc
+  languageName: node
+  linkType: hard
+
 "babel-preset-expo@npm:~8.5.1":
   version: 8.5.1
   resolution: "babel-preset-expo@npm:8.5.1"
@@ -5932,6 +5961,13 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "dotenv@npm:10.0.0"
+  checksum: f412c5fe8c24fbe313d302d2500e247ba8a1946492db405a4de4d30dd0eb186a88a43f13c958c5a7de303938949c4231c56994f97d05c4bc1f22478d631b4005
   languageName: node
   linkType: hard
 
@@ -9306,6 +9342,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mockdate@npm:^3.0.2":
+  version: 3.0.5
+  resolution: "mockdate@npm:3.0.5"
+  checksum: 72b66786d9e072379693f80bf9fb82eb5153c9741030a4294184e3ccaf952d0713fae8966f77780580cf902f8ec7ccc95577b0ad47980d255e2ffb71fc7ca49c
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -10212,6 +10255,31 @@ __metadata:
     jscodeshift: ^0.11.0
     nullthrows: ^1.1.1
   checksum: 545d1e416be5bd0bc27a9bc4d58719317577fbcb38f80082857142f4946ba336df3f5fa3e87137709691acd809ee46e1f52834648399cb50219a70f441d6e6a3
+  languageName: node
+  linkType: hard
+
+"react-native-dotenv@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "react-native-dotenv@npm:3.3.1"
+  dependencies:
+    dotenv: ^10.0.0
+  checksum: 7e53bd7e3ab43479a1c304e7ff46b7ff24c9c743cc25cfae5bef0a7c7ee93a2748639e6edc337281576899216d8d9bdddfe563882fea6743d675444e8777514b
+  languageName: node
+  linkType: hard
+
+"react-native-reanimated@npm:~2.2.0":
+  version: 2.2.4
+  resolution: "react-native-reanimated@npm:2.2.4"
+  dependencies:
+    "@babel/plugin-transform-object-assign": ^7.10.4
+    fbjs: ^3.0.0
+    mockdate: ^3.0.2
+    string-hash-64: ^1.0.3
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-gesture-handler: "*"
+  checksum: 9f970782087942527bbd7c1b0f904d66abf065f0ec6ef0e6449e44c8c95a301ca523b519d332f2c03ab1fc05a6e5c4d9d1b04563af01e6c943e1b5bf9643489d
   languageName: node
   linkType: hard
 
@@ -11198,6 +11266,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"string-hash-64@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "string-hash-64@npm:1.0.3"
+  checksum: 79de8431b4fa3e85a2429cd52a34f7948221ff167b7a094e05d6bcfd0173474b232e0c9845c96f74b0d7b6b0c8bbe2c3532a4cacb21635293ef0cf3cc8e77f06
+  languageName: node
+  linkType: hard
+
 "string-width@npm:^1.0.2 || 2 || 3 || 4, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
@@ -11941,6 +12016,13 @@ __metadata:
   version: 1.2.3
   resolution: "word-wrap@npm:1.2.3"
   checksum: 30b48f91fcf12106ed3186ae4fa86a6a1842416df425be7b60485de14bec665a54a68e4b5156647dec3a70f25e84d270ca8bc8cd23182ed095f5c7206a938c1f
+  languageName: node
+  linkType: hard
+
+"workspace@npm:^0.0.1-preview.1":
+  version: 0.0.1-preview.1
+  resolution: "workspace@npm:0.0.1-preview.1"
+  checksum: 0d3a1ed8a5735bd3295f2685a92cfd59a53d9386d6177e3dc036416e0b200729632a3760d9b34d75597b826e30620d7b02d9852c9bc2e0028c64436c9c5cda2e
   languageName: node
   linkType: hard
 

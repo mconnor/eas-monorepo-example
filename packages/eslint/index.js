@@ -1,9 +1,6 @@
 module.exports = {
-    extends: [
-    'universe/native',
-    'plugin:prettier/recommended',
-    ],
-    plugins: ['react'],
+    extends: ['universe/native'],
+    plugins: ['react', 'prettier'],
     parserOptions: {
         // Only ESLint 6.2.0 and later support ES2020.
         ecmaVersion: 2020,
@@ -15,15 +12,14 @@ module.exports = {
     },
 
     // do some additional things with it
-    rules: {
-        'prettier/prettier': ['error', { endOfLine: 'auto' }]
-    },
+  
     ignorePatterns: ['**/build/**', 'temp.js', '**/vendor/*.js'],
     rules: {
+        'prettier/prettier': ['error', { endOfLine: 'auto' }],
+        'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
-       
+        'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
     },
     settings: {
         // 'import/resolver': {
@@ -39,5 +35,5 @@ module.exports = {
             // default to latest and warns if missing
             // It will default to "detect" in the future
         }
-    },
+    }
 }

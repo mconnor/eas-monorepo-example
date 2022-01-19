@@ -17,7 +17,7 @@
     "test": "eslint --ext ts,tsx ./src"
   },
   "devDependencies": {
-    "@acme/eslint-config": "*",
+    "@acme/eslint-config": "workspace:*",
     "typescript": "^4.3.5"
   },
   "eslintConfig": {

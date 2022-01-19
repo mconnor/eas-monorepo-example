@@ -6,7 +6,6 @@
     "doctor": "yarn workspace @acme/app-managed expo doctor",
     "lint-ui": "yarn workspace @acme/ui lint",
     "fix-ui": "yarn workspace @acme/ui fix",
-    
     "lint-app": "yarn workspace @acme/app-managed lint",
     "fix-app": "yarn workspace @acme/app-managed fix",
     "clear": "./scripts/clear.sh",
@@ -21,8 +20,17 @@
     "apps/*",
     "packages/*"
   ],
+  "resolutions": {
+    "react-native": "0.64.3"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1"
   },
-  "packageManager": "yarn@3.1.1"
+  "engines": {
+    "node": ">16.13.2"
+  },
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "workspace": "^0.0.1-preview.1"
+  }
 }
