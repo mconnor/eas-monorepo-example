@@ -25,7 +25,6 @@ __metadata:
     react-dom: 17.0.1
     react-native: 0.64.3
     react-native-dotenv: ^3.3.1
-    react-native-reanimated: ~2.2.0
     react-native-web: 0.17.1
     typescript: ~4.3.5
   languageName: unknown
@@ -2613,17 +2612,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 6520911598da436e08ded482de3aaf37599ab30087f10693953cccde40ca4e6243a28a2d8ee9133db1d0b5a764c10689653f8618e99d02c3015f50c5e568aaa8
-  languageName: node
-  linkType: hard
-
-"@babel/plugin-transform-object-assign@npm:^7.10.4":
-  version: 7.16.7
-  resolution: "@babel/plugin-transform-object-assign@npm:7.16.7"
-  dependencies:
-    "@babel/helper-plugin-utils": ^7.16.7
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 4d8e7f4c08e0695e78d4c3ff9bdc0ca8243a3ce8fa9dc75940d9caabb766567ec550b2055723599e70132dab173f70e8e9f18cb120adc7badb0153527c4111be
   languageName: node
   linkType: hard
 
@@ -9342,13 +9330,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mockdate@npm:^3.0.2":
-  version: 3.0.5
-  resolution: "mockdate@npm:3.0.5"
-  checksum: 72b66786d9e072379693f80bf9fb82eb5153c9741030a4294184e3ccaf952d0713fae8966f77780580cf902f8ec7ccc95577b0ad47980d255e2ffb71fc7ca49c
-  languageName: node
-  linkType: hard
-
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -10264,22 +10245,6 @@ __metadata:
   dependencies:
     dotenv: ^10.0.0
   checksum: 7e53bd7e3ab43479a1c304e7ff46b7ff24c9c743cc25cfae5bef0a7c7ee93a2748639e6edc337281576899216d8d9bdddfe563882fea6743d675444e8777514b
-  languageName: node
-  linkType: hard
-
-"react-native-reanimated@npm:~2.2.0":
-  version: 2.2.4
-  resolution: "react-native-reanimated@npm:2.2.4"
-  dependencies:
-    "@babel/plugin-transform-object-assign": ^7.10.4
-    fbjs: ^3.0.0
-    mockdate: ^3.0.2
-    string-hash-64: ^1.0.3
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-gesture-handler: "*"
-  checksum: 9f970782087942527bbd7c1b0f904d66abf065f0ec6ef0e6449e44c8c95a301ca523b519d332f2c03ab1fc05a6e5c4d9d1b04563af01e6c943e1b5bf9643489d
   languageName: node
   linkType: hard
 
@@ -11263,13 +11228,6 @@ __metadata:
   version: 2.2.0
   resolution: "stream-buffers@npm:2.2.0"
   checksum: 4587d9e8f050d689fb38b4295e73408401b16de8edecc12026c6f4ae92956705ecfd995ae3845d7fa3ebf19502d5754df9143d91447fd881d86e518f43882c1c
-  languageName: node
-  linkType: hard
-
-"string-hash-64@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "string-hash-64@npm:1.0.3"
-  checksum: 79de8431b4fa3e85a2429cd52a34f7948221ff167b7a094e05d6bcfd0173474b232e0c9845c96f74b0d7b6b0c8bbe2c3532a4cacb21635293ef0cf3cc8e77f06
   languageName: node
   linkType: hard
 
