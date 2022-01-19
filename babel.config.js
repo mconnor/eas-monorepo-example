@@ -1,0 +1,19 @@
+console.log('babel-main')
+
+module.exports = function (api) {
+    api.cache(true)
+
+    return {
+        babelrcRoots: ['.', './apps/*', './packages/*'],
+        presets: [['babel-preset-expo']],
+        plugins: [
+            'module:react-native-dotenv',
+            ['@babel/plugin-proposal-class-properties', { loose: true }],
+            ['@babel/plugin-proposal-private-methods', { loose: true }],
+            [
+                '@babel/plugin-proposal-private-property-in-object',
+                { loose: true }
+            ],
+        ]
+    }
+}
