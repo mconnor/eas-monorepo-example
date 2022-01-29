@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { StyleSheet, Text, TextProps } from 'react-native'
+import { StyleSheet, StyleProp, TextStyle, Text, TextProps } from 'react-native'
 
 const styles = StyleSheet.create({
     paragraph: {
@@ -14,22 +14,20 @@ const styles = StyleSheet.create({
         color: 'rgb(0, 0, 238)'
     }
 })
-export interface ParagraphProps extends TextProps {
+ interface ParagraphProps extends TextProps {
     children?: ReactNode
+    style?: StyleProp<TextStyle>
+    [moreProps: number]: TextProps[]
 }
 
-export function Paragraph({ children, style, ...props }: ParagraphProps) {
-    return (
-        <Text {...props} style={[styles.paragraph, style]}>
-            {children}
-        </Text>
-    )
-}
+export const Paragraph = ({ children, style, ...rest }: ParagraphProps) => (
+    <Text {...rest} style={[styles.paragraph, style]}>
+        {children}
+    </Text>
+)
 
-export type StrongProps = {
-    children?: ReactNode
-}
-
-export function Strong({ children }: StrongProps): JSX.Element {
-    return <Text>{children}</Text>
-}
+export const Strong = ({ children, style, ...props }: ParagraphProps) => (
+    <Text {...props} style={[styles.strong, style]}>
+        {children}
+    </Text>
+)
