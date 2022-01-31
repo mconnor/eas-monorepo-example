@@ -17,11 +17,7 @@
     "test": "eslint --ext ts,tsx ./src"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.16.10",
     "@hybrid-submodule/eslint-config": "workspace:*",
-    "@types/babel__preset-env": "^7",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "~0.64.12",
     "typescript": "^4.5.5"
   },
   "eslintConfig": {
