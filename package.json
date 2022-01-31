@@ -1,6 +1,11 @@
 {
   "private": true,
   "name": "@acme/monorepo",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mconnor/eas-monorepo-example/blob/exp44/package.json"
+  },
   "scripts": {
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test",
