@@ -1,6 +1,11 @@
 {
   "private": true,
   "name": "@acme/monorepo",
+  "version": "1.00.01",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mconnor/eas-monorepo-example"
+  },
   "scripts": {
     "expo-ios": "yarn workspace @acme/app-managed ios",
     "doctor": "yarn workspace @acme/app-managed expo doctor",
@@ -22,10 +27,10 @@
     "lib/*"
   ],
   "resolutions": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "expo": "44.0.5"
+    "prettier": "2.5.1"
   },
   "engines": {
     "node": ">16.13.2"
