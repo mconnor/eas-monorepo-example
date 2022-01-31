@@ -1,16 +1,16 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require('expo/metro-config')
-const path = require('path')
+// Learn more https://docs.expo.dev/guides/monorepos
+const { getDefaultConfig } = require('expo/metro-config');
+const path = require('path');
 
-const projectRoot = __dirname
-const workspaceRoot = path.resolve(__dirname, '../..')
+const projectRoot = __dirname;
+const workspaceRoot = path.resolve(projectRoot, '../..');
 
-const config = getDefaultConfig(__dirname)
+const config = getDefaultConfig(projectRoot);
 
-config.watchFolders = [workspaceRoot]
+config.watchFolders = [workspaceRoot];
 config.resolver.nodeModulesPath = [
-    path.resolve(projectRoot, 'node_modules'),
-    path.resolve(workspaceRoot, 'node_modules')
-]
+  path.resolve(projectRoot, 'node_modules'),
+  path.resolve(workspaceRoot, 'node_modules'),
+];
 
-module.exports = config
+module.exports = config;
